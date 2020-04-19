@@ -1,16 +1,3 @@
-# 200418 알고리즘 스터디
-
-
-
-## 235. Lowest Common Ancestor of a Binary Search Tree 
-
-### BST 정의
-
-- ![image-20200419142840391](/Users/eunjeong/Library/Application Support/typora-user-images/image-20200419142840391.png)
-
-### Code
-
-```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -59,49 +46,3 @@ class Solution {
     }
             
 }
-```
-
-
-
-# 1022. Sum of Root To Leaf Binary Numbers
-
-
-
-![image-20200419142235354](/Users/eunjeong/Library/Application Support/typora-user-images/image-20200419142235354.png)
-
-- 값이 100(4), 101(5), 110(6), 111(7)이런식으로 답을 리턴해주게끔(2진수를 구하는 단순한 방법.. 트리dfs하며 값 *2하기 )
-- dfs로 리프노드까지 가며 매 순간 2진수를 계산하며 dfs로 값 넘겨주기 
-
-### Code 
-
-```java
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-class Solution {  
-    public int sumRootToLeaf(TreeNode root) {
-        //  서브트리에 대해 sum을 구하는 과정 수행하기
-        return getSum(root, 0);
-    }
-    
-    private int getSum(TreeNode root, int sum) {
-        //  가져온 앞자리수들에 대해 이진수니까 *2 그리고 거기에 이진수로 들어가는 수 더해주기(0or1)
-        sum = (sum * 2) + root.val;
-        
-      	if (root.left == null && root.right == null){
-            return sum;
-        }
-        //  왼쪽 오른쪽 서브트리에 대해 재귀적으로 sum을 구하게끔 dfs 수행
-        int left = root.left == null ? 0 :getSum(root.left, sum);
-        int right = root.right == null ? 0 :getSum(root.right, sum);
-        return left + right;
-    }
-}
-```
-

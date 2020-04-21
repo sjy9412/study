@@ -8,4 +8,5 @@
 3. 2020-04-16: 207. Course Schedule[링크](https://leetcode.com/problems/course-schedule/)
 4. 2020-04-17: 235. Lowest Common Ancestor of a Binary Search Tree[링크](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 5. 2020-04-20: 997. Find the Town Judge[링크](https://leetcode.com/problems/find-the-town-judge/)
+6. 2020-04-21: 1042. Flower Planting With No Adjacent[링크](https://leetcode.com/problems/flower-planting-with-no-adjacent/)
 
